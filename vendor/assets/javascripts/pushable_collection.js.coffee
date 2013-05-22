@@ -7,7 +7,6 @@ class Backbone.PushableCollection extends Backbone.Collection
 
   create: (attributes) ->
     model = new @model attributes
-    model.fetch()
     @add model
 
   update: (attributes) ->
