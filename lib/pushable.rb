@@ -44,21 +44,23 @@ module Pushable
   end
 
   module ClassMethods
-    def push(options={})
-      @pushes = options
+    attr_accessor :pushes
+
+    def pushable
+      @pushes = { create: :collections,
+                  update: [ :collections, :instances ],
+                 destroy: [ :collections, :instances ] } #default events and channels
     end
 
-    def pushes
-      @pushes ||= { create: :collections,
-                    update: [ :collections, :instances ],
-                   destroy: :collections } #default events and channels
+    def push(options={})
+      @pushes = options
     end
   end
 
   module Rails
     module Faye
       mattr_accessor :address
-      self.address = 'https://localhost:9292'
+      self.address = 'http://localhost:9292'
     end
   end
 end
