@@ -7,13 +7,13 @@ require "pushable/version"
 Gem::Specification.new do |s|
   s.name        = "pushable"
   s.version     = Pushable::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Pushable."
-  s.description = "TODO: Description of Pushable."
+  s.authors     = ["Bill Transue"]
+  s.email       = ["transue@gmail.com"]
+  s.homepage    = "https://github.com/billy-ran-away/pushable"
+  s.summary     = "Ah, push it pu-pu-push it real good. Your ActiveModels' changes to Backbone.js clients that is."
+  s.description = "Push ActiveModel changes to Backbone Collections and Models though a Faye Pub/Sub server."
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 3.2.12"
