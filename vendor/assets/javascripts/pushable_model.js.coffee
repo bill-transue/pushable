@@ -1,5 +1,5 @@
 class Backbone.PushableModel extends Backbone.Model
-  pushable: () ->
+  initialize: () ->
     window.FayeClient.subscribe "/sync/#{@channel()}", _.bind(@receive, @)
 
   receive: (message) ->
