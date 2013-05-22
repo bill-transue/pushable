@@ -1,6 +1,8 @@
 require 'net/http'
 
 module Pushable
+  require 'pushable/railtie' if defined?(Rails)
+
   extend ActiveSupport::Concern
 
   included do
